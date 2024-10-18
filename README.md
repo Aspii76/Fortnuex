@@ -1,4 +1,4 @@
-Fortunex
+
 Fortunex is an interactive click game where users can earn virtual coins by clicking a button. This project is designed to be a fun and addictive experience, incorporating features like auto-gain, upgrades, and a restart system that allows players to manage their progress.
 
 Features
