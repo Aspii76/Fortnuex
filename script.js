@@ -4,7 +4,7 @@ let autoClicker = null;
 let autoGainActive = false;
 let upgradeCost = 10;
 let manualIncrementValue = 1;
-const clickSound = new Audio('click-sound.mp3');
+const clickSound = new Audio('sounds/click-sound.mp3');
 
 // Función para reproducir el sonido de clic
 function playClickSound() {
