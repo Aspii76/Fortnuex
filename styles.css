@@ -1,0 +1,245 @@
+/* Importar fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Estilos globales */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente principal */
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Color de fondo */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #28a745; /* Color verde */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.navbar:hover {
+    background-color: #218838; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Padding más ajustado */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar-title {
+    font-size: 24px; /* Tamaño de fuente reducido */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px; /* Espaciado entre letras para un aspecto más elegante */
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    text-decoration: none; /* Sin subrayado */
+    color: white;
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    margin: 0 20px; /* Espaciado más sutil */
+    transition: color 0.3s ease; /* Transición suave para el color */
+    font-weight: 500; /* Peso de fuente más ligero */
+}
+
+.navbar-item:hover {
+    color: #f8f9fa; /* Color claro al pasar el ratón */
+}
+
+.navbar-button {
+    background-color: #dc3545; /* Color rojo claro para el botón de reiniciar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px; /* Bordes redondeados para un estilo más moderno */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+}
+
+.navbar-button:hover {
+    background-color: #c82333; /* Color del botón al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de levantamiento */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .navbar-title {
+        font-size: 20px; /* Tamaño reducido en móviles */
+    }
+    
+    .navbar-item {
+        font-size: 14px; /* Tamaño reducido en móviles */
+        margin: 0 10px;
+    }
+    
+    .navbar-button {
+        padding: 8px 16px; /* Padding reducido en móviles */
+    }
+}
+
+/* Estilos del header y contenedor principal */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura de la vista completa */
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px;
+}
+
+.main-content {
+    background-color: #fff; /* Color de fondo del contenido */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra del contenido */
+    padding: 20px;
+}
+
+/* Estilos de texto */
+p {
+    font-size: 20px; /* Tamaño de texto */
+    margin: 10px 0;
+}
+
+#CoinsNumb {
+    font-size: 60px; /* Tamaño grande para el número de monedas */
+    font-weight: 700;
+    color: #28a745; /* Color verde */
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 2px solid #28a745; /* Borde del número */
+    border-radius: 5px;
+}
+
+/* Estilos del contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+}
+
+/* Estilos de botones manuales y mejoras */
+#manualButton, #AutoGainButton, .upgrade-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #28a745; /* Color de fondo de los botones */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#manualButton:hover,
+#AutoGainButton:hover,
+.upgrade-button:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Texto de costo de mejora */
+#upgradeCostText {
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px 5px;
+}
+
+/* Responsive Design para botones */
+@media (max-width: 768px) {
+    #AutoGainButton, .upgrade-button {
+        font-size: 16px; /* Tamaño reducido en móviles */
+        padding: 12px 25px;
+        min-width: 150px; /* Ancho mínimo de los botones */
+    }
+    
+    .container {
+        flex-direction: column; /* Cambia a columna en móviles */
+    }
+}
+
+/* Estilos del cuadro de diálogo de confirmación */
+.confirm-dialog {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Cambiar a posición absoluta */
+    top: 60px; /* Justo debajo del botón de Restart Game */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Ajustar posición horizontal */
+    background-color: white;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 5px; /* Padding reducido */
+    z-index: 999; /* Por encima de otros elementos */
+    opacity: 0; /* Comienza como transparente */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    width: 180px; /* Ancho reducido para un diseño más pequeño */
+}
+
+/* Estado visible del cuadro de diálogo */
+.confirm-dialog.show {
+    display: block; /* Mostrar el cuadro de diálogo */
+    opacity: 1; /* Hacerlo visible */
+    transform: translateX(170%); /* Mantener centrado */
+}
+
+.confirm-dialog-content {
+    text-align: center; /* Centrar el texto */
+    font-size: 10px; /* Tamaño de texto ajustado */
+}
+
+/* Botones de confirmación */
+.confirm-button {
+    background-color: #28a745; /* Color verde */
+    color: white;
+    border: none;
+    padding: 5px 20px; /* Padding reducido */
+    border-radius: 5px;
+    font-size: 20px; /* Tamaño de fuente ajustado */
+    margin: 5px; /* Espacio entre botones */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.confirm-button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón "No" */
+.confirm-button:last-child {
+    background-color: #dc3545; /* Color rojo claro para el botón No */
+}
+
+.confirm-button:last-child:hover {
+    background-color: #c82333; /* Color más oscuro al pasar el ratón */
+}
+

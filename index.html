@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortunex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="navbar-title">Fortunex</h1>
+            <div class="navbar-links">
+                <a href="index.html" class="navbar-item">Home</a>
+                <button class="navbar-button" onclick="restartGame()">Restart Game</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="confirmDialog" class="confirm-dialog">
+        <div class="confirm-dialog-content">
+            <p>Are you sure?</p>
+            <button id="confirmYes" class="confirm-button">Yes</button>
+            <button id="confirmNo" class="confirm-button">No</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="main-content">
+                <p>You have earned:</p>
+                <p id="CoinsNumb">0€</p>
+                <div class="button-container">
+                    <button id="manualButton" onclick="increment()">Click to Earn</button>
+                    <button id="AutoGainButton" class="navbar-button" onclick="toggleAutoGain()">Activate AutoGain</button>
+                    <div class="upgrade-section">
+                        <button class="upgrade-button" onclick="upgradeAutoClicker(event)">Upgrade</button>
+                        <p id="upgradeCostText">Cost: 10€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="notification" class="notification">
+        <p id="notificationMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
